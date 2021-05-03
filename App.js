@@ -1,10 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, TouchableOpacity, Touchable } from 'react-native';
-import logo from './assets/tree_logo.png'
-import { Icon, InlineIcon } from '@iconify/react';
-import carrotIcon from '@iconify/icons-dashicons/carrot';
-import fruitWatermelon from '@iconify/icons-mdi/fruit-watermelon';
+import { StyleSheet, Text, View, Image, TouchableOpacity, } from 'react-native';
+import  logo  from './assets/tree_logo.png'
 
 export default function App() {
   return (
@@ -12,11 +9,11 @@ export default function App() {
       <Image source={logo} style={{width: 150, height: 241}} />
 
       <View style={styles.buttons}>
-        <TouchableOpacity>
-          <Icon icon={fruitWatermelon} style={{color: '#ffffff', fontSize: '40px'}} />
+        <TouchableOpacity style={styles.button}>
+         <Text>Hello</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Icon icon={carrotIcon} style={{color: '#ffffff', fontSize: '40px'}} />
+        <TouchableOpacity style={styles.button}>
+          <Text>World</Text>
         </TouchableOpacity>
         </View>
     </View>
@@ -37,6 +34,16 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 20
+    marginTop: 40,
+
+  },
+  button: {
+    backgroundColor: '#00E492',
+    width: '50%',
+    alignItems: 'center',
+    borderWidth: 4,
+    borderRadius: 25
+
+
   }
 });
